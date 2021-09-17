@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=Patua+One&family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #26061b;
+}
+
+.jump {
+    font-family: Lato, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    margin: 0 auto;
+    max-width: 80rem;
+    background-color: #e6dcc3;
+}
+
+.domain {
+    background-image: url("../images/background.jpg");
+    background-color: #e09363;
+    background-size: cover;
+    font-family: Lato, sans-serif;
+
+
+}
+
+.travel {
+    border-radius: 50%;
+    border: 5px solid hsl(35, 65%, 54%);
+    margin: auto;
+    width: 50%;
+    display: block;
+    margin-top: -4rem;
+    margin-bottom: 3rem;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    background-image: url("../images/Falling-Leaves-3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 57px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-shadow: 6px 6px 3px rgb(148, 62, 4);
+    padding: 2.5rem;
+}
+
+header h3 {
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Patua One', cursive;
+    font-size: 26px;
+    color: #a33e31;
+}
+
+h3 {
+    font-family: 'Patua One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 37px;
+}
+
+p {
+    font-size: 19px;
+}
+
+.my-details {
+    font-family: 'Roboto Condensed', sans-seri;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    background-color: #C4C4C4;
+    bottom: 0;
+    padding: 0.3rem;
+    box-shadow: 0 30px 10px -20px rgba(180, 102, 12, 0.9);
+}
+
+main {
+    grid-area: main;
+    padding: 2rem;
+    text-align: center;
+}
+
+.content,
+.info {
+    text-align: left;
+}
+
+.info li {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0.3rem;
+}
+
+.info a {
+    color: #2c87f0;
+}
+
+.info a:visited {
+    color: #636;
+
+}
+
+.info a:hover,
+a:active,
+a:focus {
+    color: #c33;
+}
+
+.info {
+    background-color: rgba(235, 231, 129, 0.1);
+    box-shadow: 1em 1em 1em rgb(182, 73, 10);
+    padding: 1rem;
+    border: 2px solid;
+    border-radius: 49px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    grid-area: footer;
+    background: #ABA8A8;
+    padding: 1rem;
+}
+
+
+
+@media screen and (min-width:50rem) {
+
+    .content,
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-auto-flow: column;
+        grid-gap: 1em 1em;
+    }
+
+    .info {
+        margin: 3rem 4rem;
+    }
