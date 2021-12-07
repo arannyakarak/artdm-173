@@ -41,6 +41,7 @@ p {
 }
 
 .section-title {
+	font-family: 'Scheherazade';
 	font-size: 4rem;
 	font-weight: 300;
 	color: black;
@@ -232,136 +233,202 @@ p {
 
 
 
-/* Projects section */
-.section-title {
+/* gallery section */
+
+
+.box h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.125em;
+	color: #4a89ca;
+	font-weight: 600;
+	margin: 0;
+}
+
+h3 {
 	font-family: 'Scheherazade';
+	font-size: 2em;
+	line-height: 1.25em;
+	margin-top: .85em;
+	margin-bottom: .5em;
 }
 
-#projects .projects {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#projects .projects-header h1 {
-	margin-bottom: 10px;
-}
-
-#projects .all-projects {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#projects .project-item {
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	padding: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 80%;
-	margin: 20px auto;
-	overflow: hidden;
-	border-radius: 10px;
-}
-
-#projects .project-info {
-	padding: 10px;
-	flex-basis: 50%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
+p {
 	color: white;
+	font-size: 1.5em;
+	line-height: 1.4;
+	margin: 0 0 1.5em;
 }
 
-#projects .project-info h1 {
-	font-size: 3rem;
-	font-weight: 300;
-	padding: 7px;
-	font-family: "Montserrat";
-}
+/* ================================= 
+  Base Layout Styles
+==================================== */
 
-#projects .project-info p {
-	color: white;
-}
+/* ---- Layout Containers ---- */
 
-/* .collage img {   
-	flex-basis: 70%;
-	height: 600px;
-	overflow: hidden;
-	position: relative;
-    object-fit: cover;
-}*/
-.project-item {
-	overflow: hidden;
-	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-	transition: 0.2s;
-}
-
-.project-item:hover {
-	transform: translateY(-0.5%);
-	box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.9);
-}
-
-.project-img {
-	display: block;
-	width: 100%;
-	height: 25rem;
-	overflow: hidden;
-	object-fit: cover;
-	position: relative;
-}
-
-
-
-
+.box,
 .content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	padding: 20px;
+	margin: auto;
+}
+
+.box {
+	width: 95%;
+	max-width: 1260px;
+	padding: 0 2.25em 4em;
+	background: #fff;
+	margin-top: 99px;
+}
+
+.main-header {
 	text-align: center;
-	margin-bottom: 30px;
-	color: white;
-
+	padding: 2.8em 0 3.8em;
 }
 
-.collage {
-	display: block;
-	width: 100%;
-
-	overflow: hidden;
-	object-fit: cover;
-	object-position: center;
-
+.cube-container {
+	max-width: 200px;
+	text-align: center;
+	margin: 0 auto 4.5em;
 }
 
-.collage-text p {
-	padding: 20px;
-	color: white;
+.main-header {
+	margin-top: 40px;
 }
 
-.collage-text h1 {
-	font-family: "Montserrat";
+/* ---- Page Elements ---- */
+
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+
+.name span {
 	font-weight: 300;
-	margin-top: 20px;
-	font-size: 3rem;
-
+	margin-left: -7px;
 }
 
+.button {
+	font-size: 1.3em;
+	color: crimson;
+	width: 90%;
+	line-height: 1.15;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: .95em 0;
+	/* border-radius: .5em; */
+	background: white;
+	margin: auto;
+}
 
+/* ---- Photo Overlay ---- */
 
+.photo-desc {
+	font-size: .85em;
+	color: #fff;
+	padding: 1.1em 1em 0;
+	background: crimson;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.cube-container {
+		float: left;
+		margin-left: 16.6%;
+	}
+}
+
+@media (min-width: 1025px) {
+	.cube-container:first-child {
+		margin-left: 0;
+	}
+
+	.cube-container:last-child {
+		float: right;
+	}
+
+	.content {
+		max-width: 900px;
+		margin: auto;
+	}
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+
+.button:hover {
+	background: rgb(233, 156, 40);
+}
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.cube-container {
+	box-shadow: 0 18px 40px 5px rgba(0, 0, 0, .4);
+	perspective: 850px;
+}
+
+.photo-cube {
+	transition: transform 4s ease-in-out;
+	width: 230px;
+	height: 200px;
+	transform-style: preserve-3d;
+}
+
+.photo-cube:hover {
+	transform: rotateY(-270deg);
+}
+
+.front,
+.back,
+.left,
+.right {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+}
+
+.front {
+	transform: translate3d(0, 0, 110px);
+}
+
+.back {
+	transform: translateZ(-110px) rotateY(270deg);
+	transform-origin: center left;
+}
+
+.left {
+	transform: rotateY(-270deg) translate3d(110px, 0, 0);
+	transform-origin: top right;
+}
+
+.right {
+	transform: translateZ(-110px) rotateY(180deg);
+}
 
 
 /* Footer */
@@ -374,6 +441,8 @@ p {
 	flex-direction: column;
 	padding-top: 50px;
 	padding-bottom: 10px;
+	margin-top: 70px;
+	;
 }
 
 #footer h2 {
@@ -438,6 +507,13 @@ p {
 		font-size: 6rem;
 	}
 
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+
+	/* End Hero */
+
 
 	/* Project */
 
@@ -461,6 +537,8 @@ p {
 
 	/* End Project */
 }
+
+
 
 /* End Media Query For Tablet */
 
@@ -494,15 +572,7 @@ p {
 
 	/* End header */
 
-	.text {
-		font-size: 1vw;
-	}
 
-	.content {
-		margin-top: -40px;
-		max-width: 90%;
-
-	}
 }
 
 /* End  Media Query For Desktop */
